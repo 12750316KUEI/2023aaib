@@ -3,7 +3,7 @@ class Solution:
             d={}
             for c in s:
                 if c in d:
-                    d[C] = d[c]=+1
+                    d[c] = d[c]+1
                 else:
                     d[c] = 1
             print(d) # 可以印看看，字母出現在次數統計結果
