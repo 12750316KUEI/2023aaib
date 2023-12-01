@@ -1,3 +1,4 @@
+#分式化簡
 a,b=list(map(int,input().split()))
 
 def gcd(a,b):
