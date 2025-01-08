@@ -1,14 +1,10 @@
-Class ...
-  def ...
-    N = len(s)
-    a = s[ :N//2]
-    b = s[N//2: ]
-    motherA = 0
-    motherB = 0
-    mother = "aeiouAEIOU"
-    for c in a:
-      if c in mother: motherA += 1
-    for c in b:
-      if c in mother: motherB += 1
-    if motherA == motherB: return True
-    else: return False
+class Solution:
+    def isMonotonic(self, nums: List[int]) -> bool:
+        up,down=False,False
+        for i in range(len(nums)-1):
+            d=nums[i+1]-nums[i]
+            if d>0: up=True
+            if d<0: down=True
+
+        if up and down: return False
+        else: return True
